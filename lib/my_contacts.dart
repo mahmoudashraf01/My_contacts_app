@@ -4,7 +4,7 @@ import 'package:mynetwork1/widgets/contacts_grid.dart';
 
 class MyContacts extends StatelessWidget {
   MyContacts({super.key});
-
+ 
   Map<String, String> socialMedia = {
     'whatsapp.png': 'https://wa.me/+201064903389',
     'linkedin.png': 'https://www.linkedin.com/in/mahmoud-dahma-16622b229',
