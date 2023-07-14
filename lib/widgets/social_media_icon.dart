@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mynetwork1/start.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialMediaIcon extends StatelessWidget {
@@ -16,17 +15,28 @@ class SocialMediaIcon extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15),
       child: InkWell(
-        child: CircleAvatar(
-          backgroundColor: Colors.white,
-          backgroundImage: AssetImage('assets/$socialMedia'),
-          radius: 40,
-        ),
-        onTap: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => StartSocialMedia(socialMediaLinks: socialMediaLinks,)),
-          );
-        },
-      ),
+          onTap: () {
+            showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll(Colors.teal),
+                    ),
+                    onPressed: () {
+                      launchUrl(Uri.parse(socialMediaLinks),
+                          mode: LaunchMode.externalApplication);
+                    },
+                    child: Text('Start $socialMedia'),
+                  );
+                });
+          },
+                    child: CircleAvatar(
+            backgroundColor: Colors.white,
+            backgroundImage: AssetImage('assets/$socialMedia.png'),
+            radius: 40,
+          ),
+          ),
     );
   }
 }

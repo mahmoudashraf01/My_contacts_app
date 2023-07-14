@@ -21,8 +21,8 @@ class StartSocialMedia extends StatelessWidget {
             backgroundColor: MaterialStatePropertyAll(Colors.teal),
           ),
           onPressed: () {
-          launchUrl(Uri.parse(socialMediaLinks),mode: LaunchMode.externalApplication);
-
+            launchUrl(Uri.parse(socialMediaLinks),
+                mode: LaunchMode.externalApplication);
           },
           child: Text('Start social media'),
         ),

@@ -6,12 +6,12 @@ class MyContacts extends StatelessWidget {
   MyContacts({super.key});
  
   Map<String, String> socialMedia = {
-    'whatsapp.png': 'https://wa.me/+201064903389',
-    'linkedin.png': 'https://www.linkedin.com/in/mahmoud-dahma-16622b229',
-    'github.png': 'https://github.com/mahmoudashraf01',
-    'facebook.png': 'https://www.facebook.com/mahmoud.eldahma.98',
-    'instagram.png': 'https://www.instagram.com/ma7moud_eldahma/',
-    'twitter.png': 'https://mobile.twitter.com/MahmoudDahma1',
+    'whatsapp': 'https://wa.me/+201064903389',
+    'linkedin': 'https://www.linkedin.com/in/mahmoud-dahma-16622b229',
+    'github': 'https://github.com/mahmoudashraf01',
+    'facebook': 'https://www.facebook.com/mahmoud.eldahma.98',
+    'instagram': 'https://www.instagram.com/ma7moud_eldahma/',
+    'twitter': 'https://mobile.twitter.com/MahmoudDahma1',
   };
 
   @override
