@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mynetwork1/my_provider.dart';
+import 'package:provider/provider.dart';
 import 'my_contacts.dart';
 
 void main() {
@@ -8,12 +10,17 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override   
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyContacts(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => ActionsIconProvider()),
+        ChangeNotifierProvider(create: (context) => SocialIconProvider()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: MyContacts(),
+      ),
     );
   }
 }
-
